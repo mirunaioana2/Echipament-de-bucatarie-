@@ -2,53 +2,47 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.echipamentdebucatarie;
+package ro.ugal.aciee.echipamentdebucatarie;
 
 /**
  *
- * @author Asus
+ * @author Amalia
  */
 
+// clasa comuna
 public class EchipamentdeBucatarie {
-    String marca;
-    String model;
-    double capacitate; // Capacitatea în litri
-    double consumEnergie; // Consumul de energie (kWh)
+    public String producator;
+    public double pret;
+    public String culoare;
 
-    // Constructor fara argumente
+    // constructor fara argumente
     public EchipamentdeBucatarie() {
-        marca = "Necunoscut";
-        model = "Necunoscut";
-        capacitate = 0.0;
-        consumEnergie = 0.0;
+        this.producator = "";
+        this.pret = 0.0;
+        this.culoare = "";
     }
 
-    // Constructor cu toate argumentele
-    public EchipamentdeBucatarie(String marca, String model, double capacitate, double consumEnergie) {
-        this.marca = marca;
-        this.model = model;
-        this.capacitate = capacitate;
-        this.consumEnergie = consumEnergie;
+    // constructor cu toate argumentele
+    public EchipamentdeBucatarie(String producator, double pret, String culoare) {
+        this.producator = producator;
+        this.pret = pret;
+        this.culoare = culoare;
     }
 
-    // Constructor de copiere
-
-    public EchipamentdeBucatarie(EchipamentdeBucatarie echipament) {
-        this.marca = echipament.marca;
-        this.model = echipament.model;
-        this.capacitate = echipament.capacitate;
-        this.consumEnergie = echipament.consumEnergie;
+    // constructor de copiere
+    public EchipamentdeBucatarie(EchipamentdeBucatarie other) {
+        this.producator = other.producator;
+        this.pret = other.pret;
+        this.culoare = other.culoare;
     }
 
-    // Metoda toString rescrisa pentru clasa EchipamentdeBucatarie
-    
+    // rescriere metoda toString
     @Override
     public String toString() {
-        return "Echipament de bucatarie [Marca: " + marca + ", Model: " + model + 
-               ", Capacitate: " + capacitate + "L, Consum energie: " + consumEnergie + " kWh]";
+        return "EchipamentDeBucatarie{" +
+                "producator='" + producator + '\'' +
+                ", pret=" + pret +
+                ", culoare='" + culoare + '\'' +
+                '}';
     }
-} 
-    
-        
-
-       
+}
