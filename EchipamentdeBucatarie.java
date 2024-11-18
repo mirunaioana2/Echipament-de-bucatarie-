@@ -2,47 +2,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package ro.ugal.aciee.echipamentdebucatarie;
+package com.mycompany.echipamentdebucatarie;
 
 /**
  *
- * @author Amalia
+ * @author Gigabyte
  */
-
-// clasa comuna
+//clasa parinte
 public class EchipamentdeBucatarie {
-    public String producator;
-    public double pret;
-    public String culoare;
+    protected String marca;
+    protected double pret;
+    protected double greutate;
 
-    // constructor fara argumente
+//constructor implicit
     public EchipamentdeBucatarie() {
-        this.producator = "";
+        this.marca = "Necunoscuta";
         this.pret = 0.0;
-        this.culoare = "";
+        this.greutate = 0.0;
     }
 
-    // constructor cu toate argumentele
-    public EchipamentdeBucatarie(String producator, double pret, String culoare) {
-        this.producator = producator;
+//constructor cu parametri
+    public EchipamentdeBucatarie(String marca, double pret, double greutate) {
+        this.marca = marca;
         this.pret = pret;
-        this.culoare = culoare;
+        this.greutate = greutate;
     }
 
-    // constructor de copiere
-    public EchipamentdeBucatarie(EchipamentdeBucatarie other) {
-        this.producator = other.producator;
-        this.pret = other.pret;
-        this.culoare = other.culoare;
-    }
-
-    // rescriere metoda toString
+//metoda toString
     @Override
     public String toString() {
-        return "EchipamentDeBucatarie{" +
-                "producator='" + producator + '\'' +
-                ", pret=" + pret +
-                ", culoare='" + culoare + '\'' +
-                '}';
+        return "EchipamentdeBucatarie{" +
+               "marca='" + marca + '\'' +
+               ", pret=" + pret +
+               ", greutate=" + greutate +
+               '}';
     }
 }
+
