@@ -6,36 +6,49 @@ package com.mycompany.echipamentdebucatarie;
 
 /**
  *
- * @author Gigabyte
+ * @author Asus
  */
-//clasa parinte
+
 public class EchipamentdeBucatarie {
-    protected String marca;
-    protected double pret;
-    protected double greutate;
+    String marca;
+    String model;
+    double capacitate; // Capacitatea în litri
+    double consumEnergie; // Consumul de energie (kWh)
 
-//constructor implicit
+    // Constructor fara argumente
     public EchipamentdeBucatarie() {
-        this.marca = "Necunoscuta";
-        this.pret = 0.0;
-        this.greutate = 0.0;
+        marca = "Necunoscut";
+        model = "Necunoscut";
+        capacitate = 0.0;
+        consumEnergie = 0.0;
     }
 
-//constructor cu parametri
-    public EchipamentdeBucatarie(String marca, double pret, double greutate) {
+    // Constructor cu toate argumentele
+    public EchipamentdeBucatarie(String marca, String model, double capacitate, double consumEnergie) {
         this.marca = marca;
-        this.pret = pret;
-        this.greutate = greutate;
+        this.model = model;
+        this.capacitate = capacitate;
+        this.consumEnergie = consumEnergie;
     }
 
-//metoda toString
+    // Constructor de copiere
+
+    public EchipamentdeBucatarie(EchipamentdeBucatarie echipament) {
+        this.marca = echipament.marca;
+        this.model = echipament.model;
+        this.capacitate = echipament.capacitate;
+        this.consumEnergie = echipament.consumEnergie;
+    }
+
+    // Metoda toString rescrisa pentru clasa EchipamentdeBucatarie
+    
     @Override
     public String toString() {
-        return "EchipamentdeBucatarie{" +
-               "marca='" + marca + '\'' +
-               ", pret=" + pret +
-               ", greutate=" + greutate +
-               '}';
+        return "Echipament de bucatarie [Marca: " + marca + ", Model: " + model + 
+               ", Capacitate: " + capacitate + "L, Consum energie: " + consumEnergie + " kWh]";
     }
-}
+} 
+    
+        
 
+       
