@@ -6,7 +6,7 @@ package com.mycompany.echipamentbucatarie;
 
 /**
  *
- * @author Butza
+ * @author Gabriela
  */
 
 public class EchipamentBucatarie {
