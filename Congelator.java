@@ -6,10 +6,10 @@ package com.mycompany.echipamentbucatarie;
 
 /**
  *
- * @author Butza
+ * @author Gabriela
  */
 public class Congelator extends EchipamentBucatarie  {
-    private boolean functieDecongelareAutomata; //zice daca congelatorul poate sa aiba functia
+    private boolean functieDecongelareAutomata; 
 
     // constructor fara argumente
     public Congelator() {
