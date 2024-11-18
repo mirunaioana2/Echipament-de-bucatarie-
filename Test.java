@@ -6,20 +6,20 @@ package com.mycompany.echipamentdebucatarie;
 
 /**
  *
- * @author Asus
+ * @author Gigabyte
  */
 public class Test {
     public static void main(String[] args) {
-        // Crearea unui obiect EchipamentdeBucatarie
-        EchipamentdeBucatarie echipament = new EchipamentdeBucatarie("Samsung", "X123", 300, 1.2);
-        System.out.println(echipament); // Afișează informațiile despre echipament
+        // === Test EchipamentDeBucatarie ===
+        EchipamentdeBucatarie echipament = new EchipamentdeBucatarie("Bosch", 500.0, 7.5);
+        System.out.println("Echipament: " + echipament);
 
-        // Crearea unui obiect Frigider
-        Frigider frigider = new Frigider("Bosch", "FreshX", 500, 1.5, true);
-        System.out.println(frigider); // Afișează informațiile despre frigider
+        // === Test Expressor ===
+        Expressor expressor = new Expressor("DeLonghi", 799.99, 4.2, 1.5, 1350);
+        System.out.println("Expressor: " + expressor);
 
-        // Crearea unui obiect CombinaFrigorifica
-        CombinaFrigorifica combina = new CombinaFrigorifica("Whirlpool", "ComboX", 600, 1.8, 2, true);
-        System.out.println(combina); // Afișează informațiile despre combina frigorifica
+        // === Test Cafetiera ===
+        Cafetiera cafetiera = new Cafetiera("Philips", 299.99, 3.5, 10, true);
+        System.out.println("Cafetiera: " + cafetiera);
     }
 }
