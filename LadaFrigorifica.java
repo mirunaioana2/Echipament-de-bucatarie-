@@ -6,7 +6,7 @@ package com.mycompany.echipamentbucatarie;
 
 /**
  *
- * @author Butza
+ * @author Gabriela
  */
 public class LadaFrigorifica extends EchipamentBucatarie {
     private boolean portabil;
@@ -16,7 +16,7 @@ public class LadaFrigorifica extends EchipamentBucatarie {
         super();
     }
     
-    public LadaFrigorifica(LadaFrigorifica o) { //copiat de sus
+    public LadaFrigorifica(LadaFrigorifica o) { // de sus
     }
 
     // constructor cu toate argumentele
