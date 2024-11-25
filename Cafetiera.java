@@ -9,11 +9,11 @@ package com.mycompany.echipamentdebucatarie;
  * @author Gigabyte
  */
 public class Cafetiera extends EchipamentdeBucatarie {
-    private double capacitateCeainic; // Capacitatea ceainicului
-    private String material; // Materialul din care este făcută cafetiera
-    private boolean functiePastreazaCald; // Dacă păstrează cafeaua caldă
-    private int timpPreparare; // Timpul necesar pentru prepararea cafelei
-    private String tipFiltru; // Tipul de filtru utilizat
+    private double capacitateCeainic; 
+    private String material; 
+    private boolean functiePastreazaCald; 
+    private int timpPreparare; 
+    private String tipFiltru; 
 
     // Constructor fara argumente
     public Cafetiera() {
