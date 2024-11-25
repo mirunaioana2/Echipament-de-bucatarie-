@@ -10,16 +10,16 @@ package com.mycompany.echipamentbucatarie;
  */
 
 public class EchipamentBucatarie {
-    public String marca;
-    public String model;
-    public int capacitateLitri;
-    public int consumEnergieKwh;
-    public String tipEnergie; 
-    public int garantieAni;
-    public double pret;
-    public String dimensiuni; // LxWxH
-    public String culoare;
-    public int nivelZgomot;
+    private String marca;
+    private String model;
+    private int capacitateLitri;
+    private int consumEnergieKwh;
+    private String tipEnergie; 
+    private int garantieAni;
+    private double pret;
+    private String dimensiuni; // LxWxH
+    private String culoare;
+    private int nivelZgomot;
 
     // constructor fara argumente
     public EchipamentBucatarie() {}
