@@ -15,7 +15,7 @@ public class Cafetiera extends EchipamentdeBucatarie {
     private int timpPreparare; // Timpul necesar pentru prepararea cafelei
     private String tipFiltru; // Tipul de filtru utilizat
 
-    // Constructor fără argumente
+    // Constructor fara argumente
     public Cafetiera() {
         super();
         this.capacitateCeainic = 0.0;
@@ -25,7 +25,7 @@ public class Cafetiera extends EchipamentdeBucatarie {
         this.tipFiltru = "";
     }
 
-    // Constructor cu toți parametrii
+    // Constructor cu tori parametrii
     public Cafetiera(String marca, String model, double pret, int garantie, String categorie, 
  double capacitateCeainic, String material, boolean functiePastreazaCald, int timpPreparare, String tipFiltru) {
         super(marca, model, pret, garantie, categorie);
@@ -44,18 +44,18 @@ public class Cafetiera extends EchipamentdeBucatarie {
         this.functiePastreazaCald = other.functiePastreazaCald;
         this.timpPreparare = other.timpPreparare;
         this.tipFiltru = other.tipFiltru;
+        
     }
 
-    // Implementare metodă abstractă: descriereEchipament
+    // implementarea metodei abstracte
     @Override
-    public String descriereEchipament() {
-        return "Cafetiera " + getMarca() + " model " + getModel() + ", cu capacitate ceainic de " + capacitateCeainic + " litri, material " + material + ".";
+    public String tipEchipament() {
+        return "Cafetiera";
     }
 
-    // Implementare metodă abstractă: calculeazaReducere
     @Override
-    public double calculeazaReducere(double procent) {
-        return getPret() - (getPret() * procent / 100);
+    public double calculeazaCostTotal(double costLivrare) {
+        return getPret() + costLivrare;
     }
 
     // Metodă toString
@@ -111,4 +111,7 @@ public class Cafetiera extends EchipamentdeBucatarie {
     public void setTipFiltru(String tipFiltru) {
         this.tipFiltru = tipFiltru;
     }
+
+    
 }
+
