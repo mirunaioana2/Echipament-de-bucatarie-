@@ -47,7 +47,7 @@ package com.mycompany.echipamentdebucatarie;
     }
 }
 */
-public class Test {
+/*public class Test {
     public static void main(String[] args) {
         // Creare obiect EchipamentdeBucatarie (de exemplu, un frigider generic)
         EchipamentdeBucatarie echipament1 = new Frigider("Samsung", "RT50K6351S8", 2000.0, 24, "Touch", true, -18.0, 8.0, "dreapta", "inox", "argintiu") {};
@@ -57,16 +57,15 @@ public class Test {
 
         // Creare obiect CombinaFrigorifica folosind constructorul cu argumente
         CombinaFrigorifica combina1 = new CombinaFrigorifica("LG", "GBB72MCUFN",24,"Touch",2, true, "No Frost", 36.0, "alb", 2500.0) {
-            @Override
-            public String tipEchipament() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+             @Override
+    public String tipEchipament() {
+        return "Cuptor cu microunde";
+    }
 
-            @Override
-            public double calculeazaCostTotal(double costLivrare) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
+    @Override
+    public double calculeazaCostTotal(double costLivrare) {
+        return getPret() + costLivrare;
+    }
 
         // Afișare detalii pentru Echipament (care este un Frigider)
         System.out.println("Detalii Echipament 1 (Frigider):");
@@ -97,13 +96,192 @@ public class Test {
         System.out.println("\nDetalii actualizate Combina Frigorifica 1:");
         System.out.println(combina1.toString());
 
-        // Apelare metoda calculează reducere pentru Frigider
-        double reducereFrigider = frigider1.calculeazaReducere(10); // reducere 10%
-        System.out.println("\nFrigider 1 cu reducere de 10%: " + reducereFrigider + " RON");
-
-        // Apelare metoda calculează reducere pentru Combina Frigorifica
-        double reducereCombina = combina1.calculeazaReducere(15); // reducere 15%
-        System.out.println("Combina Frigorifica 1 cu reducere de 15%: " + reducereCombina + " RON");
+       
     }
 }
+*/
+/*public class Test {
+    public static void main(String[] args) {
+        // Creare obiect EchipamentdeBucatarie (Frigider) folosind constructorul fara argumente
+        Frigider frigider1 = new Frigider() {};
+        // Creare obiect EchipamentdeBucatarie (Frigider) folosind constructorul cu toti parametrii
+        Frigider frigider2 = new Frigider("Samsung", "RT50K6351S8", 2000.0, 24, "Touch", true, -18.0, 8.0, "dreapta", "inox", "argintiu") {};
+        // Creare obiect EchipamentdeBucatarie (Frigider) folosind constructorul de copiere
+        Frigider frigider3 = new Frigider((Frigider) frigider2) {};
 
+        // Creare obiect CombinaFrigorifica folosind constructorul fara argumente
+        CombinaFrigorifica combina1 = new CombinaFrigorifica() {};
+        // Creare obiect CombinaFrigorifica folosind constructorul cu toti parametrii
+        CombinaFrigorifica combina2 = new CombinaFrigorifica("LG", "GBB72MCUFN", 24, "Touch", 2, true, "No Frost", 36.0, "alb", 2500.0) {};
+        // Creare obiect CombinaFrigorifica folosind constructorul de copiere
+        CombinaFrigorifica combina3 = new CombinaFrigorifica(combina2) {};
+
+        // Afisare date pentru Frigider 1
+        System.out.println("Detalii Frigider 1 (constructor fara argumente):");
+        System.out.println(frigider1.toString());
+
+        // Afisare date pentru Frigider 2
+        System.out.println("\nDetalii Frigider 2 (constructor cu parametri):");
+        System.out.println(frigider2.toString());
+
+        // Afisare date pentru Frigider 3
+        System.out.println("\nDetalii Frigider 3 (constructor de copiere):");
+        System.out.println(frigider3.toString());
+
+        // Afisare date pentru Combina Frigorifica 1
+        System.out.println("\nDetalii Combina Frigorifica 1 (constructor fara argumente):");
+        System.out.println(combina1.toString());
+
+        // Afisare date pentru Combina Frigorifica 2
+        System.out.println("\nDetalii Combina Frigorifica 2 (constructor cu parametri):");
+        System.out.println(combina2.toString());
+
+        // Afisare date pentru Combina Frigorifica 3
+        System.out.println("\nDetalii Combina Frigorifica 3 (constructor de copiere):");
+        System.out.println(combina3.toString());
+    }
+}
+*/
+/*import java.util.ArrayList;
+
+public class Test {
+    public static void main(String[] args) {
+        // Creare array de 10 elemente pentru Frigider cu Object[]
+        Object[] frigiderArray = new Object[10];
+        
+        // Popularea array-ului frigiderArray cu instanțe de Frigider
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                frigiderArray[i] = new Frigider("Samsung", "RT50K6351S8", 2000.0, 24, "Touch", true, -18.0, 8.0, "dreapta", "inox", "argintiu") {};
+            } else {
+                frigiderArray[i] = new Frigider() {}; // Folosim constructorul fără argumente
+            }
+        }
+
+        // Creare array de 10 elemente pentru CombinaFrigorifica cu Object[]
+        Object[] combinaArray = new Object[10];
+        
+        // Popularea array-ului combinaArray cu instanțe de CombinaFrigorifica
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                combinaArray[i] = new CombinaFrigorifica("LG", "GBB72MCUFN", 2500.0, 24, "Touch", 2, true, "No Frost", 36.0, "alb", 2500.0) {};
+            } else {
+                combinaArray[i] = new CombinaFrigorifica() {}; // Folosim constructorul fără argumente
+            }
+        }
+
+        // Creare ArrayList pentru Frigider
+        ArrayList<Object> frigiderList = new ArrayList<>();
+        
+        // Popularea ArrayList-ului frigiderList cu instanțe de Frigider
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                frigiderList.add(new Frigider("Samsung", "RT50K6351S8", 2000.0, 24, "Touch", true, -18.0, 8.0, "dreapta", "inox", "argintiu") {});
+            } else {
+                frigiderList.add(new Frigider() {}); // Folosim constructorul fără argumente
+            }
+        }
+
+        // Creare ArrayList pentru CombinaFrigorifica
+        ArrayList<Object> combinaList = new ArrayList<>();
+        
+        // Popularea ArrayList-ului combinaList cu instanțe de CombinaFrigorifica
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                combinaList.add(new CombinaFrigorifica("LG", "GBB72MCUFN", 2500.0, 24, "Touch", 2, true, "No Frost", 36.0, "alb", 2500.0) {});
+            } else {
+                combinaList.add(new CombinaFrigorifica() {}); // Folosim constructorul fără argumente
+            }
+        }
+
+        // Afisare date pentru obiectele din frigiderArray
+        System.out.println("Detalii pentru frigiderArray (Object[]):");
+        for (Object obj : frigiderArray) {
+            System.out.println(((Frigider) obj).toString());
+        }
+
+        // Afisare date pentru obiectele din combinaArray
+        System.out.println("\nDetalii pentru combinaArray (Object[]):");
+        for (Object obj : combinaArray) {
+            System.out.println(((CombinaFrigorifica) obj).toString());
+        }
+
+        // Afisare date pentru obiectele din frigiderList
+        System.out.println("\nDetalii pentru frigiderList (ArrayList<Object>):");
+        for (Object obj : frigiderList) {
+            System.out.println(((Frigider) obj).toString());
+        }
+
+        // Afisare date pentru obiectele din combinaList
+        System.out.println("\nDetalii pentru combinaList (ArrayList<Object>):");
+        for (Object obj : combinaList) {
+            System.out.println(((CombinaFrigorifica) obj).toString());
+        }
+    }
+}
+*/
+
+/*import java.util.ArrayList;
+public class Test {
+    public static void main(String[] args) {
+        // Creare ArrayList pentru Frigider
+        ArrayList<Frigider> frigiderList = new ArrayList<>();
+        
+        // Popularea ArrayList-ului frigiderList cu 10 instanțe de Frigider
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                // Constructor cu parametri
+                frigiderList.add(new Frigider("Samsung", "RT50K6351S8", 2000.0, 24, "Touch", true, -18.0, 8.0, "dreapta", "inox", "argintiu") {});
+            } else {
+                // Constructor fără parametri
+                frigiderList.add(new Frigider() {});
+            }
+        }
+
+        // Creare ArrayList pentru CombinaFrigorifica
+        ArrayList<CombinaFrigorifica> combinaList = new ArrayList<>();
+        
+        // Popularea ArrayList-ului combinaList cu 10 instanțe de CombinaFrigorifica
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                // Constructor cu parametri
+                combinaList.add(new CombinaFrigorifica("LG", "GBB72MCUFN", 2500.0, 24, "Touch", 2, true, "No Frost", 36.0, "alb", 2500.0) {});
+            } else {
+                // Constructor fără parametri
+                combinaList.add(new CombinaFrigorifica() {});
+            }
+        }
+
+        // Afisare date pentru Frigidere
+        System.out.println("Detalii pentru Frigidere:");
+        for (Frigider frigider : frigiderList) {
+            System.out.println(frigider.toString());
+        }
+
+        // Afisare date pentru Combine Frigorifice
+        System.out.println("\nDetalii pentru Combine Frigorifice:");
+        for (CombinaFrigorifica combina : combinaList) {
+            System.out.println(combina.toString());
+        }
+    }
+}
+*/
+import java.util.ArrayList;
+
+public class Test {
+    public static void main(String[] args) {
+        ArrayList<Frigider> frigiderList = new ArrayList<>();
+        ArrayList<CombinaFrigorifica> combinaList = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            frigiderList.add(i % 2 == 0 ? new Frigider("Samsung", "RT50K6351S8", 2000.0, 24, "Touch", true, -18.0, 8.0, "dreapta", "inox", "argintiu") {} : new Frigider() {});
+            combinaList.add(i % 2 == 0 ? new CombinaFrigorifica("LG", "GBB72MCUFN", 2500.0, 24, "Touch", 2, true, "No Frost", 36.0, "alb", 2500.0) {} : new CombinaFrigorifica() {});
+        }
+
+        System.out.println("Detalii pentru Frigidere:");
+        for (Frigider frigider : frigiderList) System.out.println(frigider.toString());
+
+        System.out.println("\nDetalii pentru Combine Frigorifice:");
+        for (CombinaFrigorifica combina : combinaList) System.out.println(combina.toString());
+    }
+}

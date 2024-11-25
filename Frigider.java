@@ -135,7 +135,7 @@ package com.mycompany.echipamentdebucatarie;
     }
 }
 */
-public abstract class Frigider extends EchipamentdeBucatarie {
+public class Frigider extends EchipamentdeBucatarie {
     private boolean areNoFrost; // Tehnologia NoFrost
     private double temperaturaMinima; // Temperatura minima de functionare (°C)
     private double temperaturaMaxima; // Temperatura maxima de functionare (°C)
@@ -175,15 +175,6 @@ public abstract class Frigider extends EchipamentdeBucatarie {
         this.tipDeschidereUsa = altFrigider.tipDeschidereUsa;
         this.materialUsa = altFrigider.materialUsa;
         this.culoare = altFrigider.culoare;
-    }
-
-    // Metoda toString rescrisa pentru Frigider
-    @Override
-    public String toString() {
-        return "Frigider [Marca: " + getMarca() + ", Model: " + getModel() + ", Pret: " + getPret() + 
-               ", Garantie: " + getGarantie() + ", Tip Control: " + gettipControl() + " kWh, Are NoFrost: " + (areNoFrost ? "Da" : "Nu") +
-               ", Temperatura Minima: " + temperaturaMinima + "°C, Temperatura Maxima: " + temperaturaMaxima + "°C" +
-               ", Tip Deschidere Usa: " + tipDeschidereUsa + ", Material Usa: " + materialUsa + ", Culoare: " + culoare + "]";
     }
 
     // Metode getter și setter pentru atribute private
@@ -235,17 +226,21 @@ public abstract class Frigider extends EchipamentdeBucatarie {
         this.culoare = culoare;
     }
 
-    private String gettipControl() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+     //implementarea metodei abstracte
     @Override
     public String tipEchipament() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Frigider:";
     }
 
     @Override
     public double calculeazaCostTotal(double costLivrare) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return getPret() + costLivrare;
+    }
+    // Metoda toString rescrisa pentru Frigider
+     @Override
+    public String toString() {
+        return "Frigider : ["+ ", Are NoFrost: " + (areNoFrost ? "Da" : "Nu") +
+               ", Temperatura Minima: " + temperaturaMinima + "°C, Temperatura Maxima: " + temperaturaMaxima + "°C" +
+               ", Tip Deschidere Usa: " + tipDeschidereUsa + ", Material Usa: " + materialUsa + ", Culoare: " + culoare + "]";
     }
 }

@@ -142,7 +142,7 @@ package com.mycompany.echipamentdebucatarie;
     }
 }
 */
-public abstract class CombinaFrigorifica extends EchipamentdeBucatarie {
+public class CombinaFrigorifica extends EchipamentdeBucatarie {
     private int numarUsi; // Numarul de usi
     private boolean areDispenserApa; // Daca are dispenser de apa
     private String sistemRacire; // Tipul de sistem de racire (ex: No Frost, clasic)
@@ -183,17 +183,7 @@ public abstract class CombinaFrigorifica extends EchipamentdeBucatarie {
         this.culoare = altaCombina.culoare;
         
     }
-
-    // Metoda toString rescrisa pentru CombinaFrigorifica
-    @Override
-    public String toString() {
-        return "Combina Frigorifica [Marca: " + getMarca() + ", Model: " + getModel() +
-               ",Garantie: " + getgarantie() +",Tip Control:"+gettipControl()+ " kWh, Numar usi: " + numarUsi + 
-               ", Are dispenser apa: " + (areDispenserApa ? "Da" : "Nu") + 
-               ", Sistem racire: " + sistemRacire + ", Nivel zgomot: " + nivelZgomot + " dB" +
-               ", Culoare: " + culoare + ", Pret: " + getpret() + " RON]";
-    }
-
+    
     // Metode getter și setter pentru atribute private
     public int getNumarUsi() {
         return numarUsi;
@@ -234,25 +224,23 @@ public abstract class CombinaFrigorifica extends EchipamentdeBucatarie {
         this.culoare = culoare;
     }
     
-    private String getpret() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private String getgarantie() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private String gettipControl() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+     //implementarea metodei abstracte
     @Override
     public String tipEchipament() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Combina frigorifica:";
     }
 
     @Override
     public double calculeazaCostTotal(double costLivrare) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return getPret() + costLivrare;
     }
-}
+    // Metoda toString rescrisa pentru CombinaFrigorifica
+    @Override
+    public String toString() {
+        return "Combina Frigorifica :"+", Numar usi: " + numarUsi + 
+               ", Are dispenser apa: " + (areDispenserApa ? "Da" : "Nu") + 
+               ", Sistem racire: " + sistemRacire + ", Nivel zgomot: " + nivelZgomot + " dB" +
+               ", Culoare: " + culoare + " ";
+    }
+
+} 
