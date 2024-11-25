@@ -9,13 +9,13 @@ package com.mycompany.echipamentdebucatarie;
  * @author Gigabyte
  */
 public class Expressor extends EchipamentdeBucatarie {
-    private double capacitateRezervor; // Capacitatea rezervorului de apă
-    private int putere; // Puterea în wați
-    private boolean rasnitaIncorporata; // Dacă are râșniță încorporată
-    private String tipCafea; // Tipul de cafea suportat (boabe, măcinată etc.)
-    private String culoare; // Culoarea expressorului
+    private double capacitateRezervor; 
+    private int putere; 
+    private boolean rasnitaIncorporata; 
+    private String tipCafea; 
+    private String culoare; 
 
-    // Constructor fără argumente
+    // Constructor fara argumente
     public Expressor() {
         super();
         this.capacitateRezervor = 0.0;
@@ -25,7 +25,7 @@ public class Expressor extends EchipamentdeBucatarie {
         this.culoare = "";
     }
 
-    // Constructor cu toți parametrii
+    // Constructor cu toti parametrii
     public Expressor(String marca, String model, double pret, int garantie, String categorie, 
                      double capacitateRezervor, int putere, boolean rasnitaIncorporata, String tipCafea, String culoare) {
         super(marca, model, pret, garantie, categorie);
@@ -46,19 +46,19 @@ public class Expressor extends EchipamentdeBucatarie {
         this.culoare = other.culoare;
     }
 
-    // Implementare metodă abstractă: descriereEchipament
+    // Implementare metoda abstracta: descriereEchipament
     @Override
     public String descriereEchipament() {
         return "Expressor " + getMarca() + " model " + getModel() + ", putere de " + putere + " W, cu capacitate rezervor " + capacitateRezervor + " litri.";
     }
 
-    // Implementare metodă abstractă: calculeazaReducere
+    // Implementare metoda abstracta: calculeazaReducere
     @Override
     public double calculeazaReducere(double procent) {
         return getPret() - (getPret() * procent / 100);
     }
 
-    // Metodă toString
+    // Metoda toString
     @Override
     public String toString() {
         return super.toString() +
@@ -71,7 +71,7 @@ public class Expressor extends EchipamentdeBucatarie {
                '}';
     }
 
-    // Getters și Setters
+    // Getters si Setters
     public double getCapacitateRezervor() {
         return capacitateRezervor;
     }
