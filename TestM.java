@@ -285,6 +285,10 @@ public class Test {
         CombinaFrigorifica[] combineFrigorifice = new CombinaFrigorifica[10];
         for (int i = 0; i < combineFrigorifice.length; i++) {
             combineFrigorifice[i] = new CombinaFrigorifica("Brand" + i,"Model" + i,24 + i,"Touch",2 + (i % 2),i % 2 == 0,i % 2 == 0 ? "No Frost" : "Clasic",35.0 + (i % 3) * 2,i % 2 == 0 ? "Alb" : "Negru",1500.0 + (i * 100)) {};
+            if(combineFrigorifice[i].getAreDispensardeApa)
+            {
+                combineFrigorifice[i].setAreDispensardeApa
+            }
         }
 
         // Afisarea instantelor pentru CuptorIncorporat
