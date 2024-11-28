@@ -47,9 +47,10 @@ public class Test {
         for (int i = 0; i < 20; i++) {
             cafetiere.add(new Cafetiera("Cafetiera" + i, "ModelC" + i, 200.0 + i * 20, 18,
                     "Manual", 1.0 + i * 0.2, "Plastic", false, 10, "Filtru permanent"));
-        }
+
         if(i % 2 == 0)
-            System.out.println("ModelC este par:" + cafetiere.get(i));}
+            System.out.println("ModelC este par:" + cafetiere.get(i));
+        }
 
         // Afisare exemple
         System.out.println("\nExpressors:");
