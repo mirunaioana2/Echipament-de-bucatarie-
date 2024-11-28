@@ -32,6 +32,7 @@ public class Test {
         System.out.println("\nCafetiera 1: " + cafetiera1);
         System.out.println("Cafetiera 2: " + cafetiera2);
         System.out.println("Cafetiera 3 (copiată): " + cafetiera3);
+        System.out.println();
 
         // Vector pentru Expressor
         ArrayList<Object> expressors = new ArrayList<>();
