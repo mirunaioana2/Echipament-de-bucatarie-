@@ -22,6 +22,7 @@ public class Test {
         System.out.println("Expressor 1: " + expressor1);
         System.out.println("Expressor 2: " + expressor2);
         System.out.println("Expressor 3 (copiat): " + expressor3);
+        System.out.println();
 
         // Testare Cafetiera
         Cafetiera cafetiera1 = new Cafetiera();
