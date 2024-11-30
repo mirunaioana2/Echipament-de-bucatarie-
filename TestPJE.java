@@ -58,5 +58,20 @@ public class Test {
 
         System.out.println("\nCafetiere:");
         cafetiere.forEach(System.out::println);
+
+        // Afisare obiecte conform unor conditii
+        System.out.println("\nExpressors cu putere > 1500 si capacitate rezervor > 1.5:");
+        expressors.stream()
+                .filter(obj -> obj instanceof Expressor)
+                .map(obj -> (Expressor) obj)
+                .filter(ex -> ex.getPutere() > 1500 && ex.getCapacitateRezervor() > 1.5)
+                .forEach(System.out::println);
+
+        System.out.println("\nCafetiere care au functia de a pastra cald si capacitate ceainic > 1.2:");
+        cafetiere.stream()
+                .filter(obj -> obj instanceof Cafetiera)
+                .map(obj -> (Cafetiera) obj)
+                .filter(ca -> ca.isFunctiePastreazaCald() && ca.getCapacitateCeainic() > 1.2)
+                .forEach(System.out::println);
     }
 }
