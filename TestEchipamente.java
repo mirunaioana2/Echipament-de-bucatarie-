@@ -27,11 +27,33 @@ public class TestEchipamente {
         System.out.println(congelator2);
         System.out.println(congelator3);
 
+        // verific si afisez congelatoare care indeplinesc conditiile
+System.out.println("\nCongelatoare care indeplinesc conditiile:");
+for (Object obj : congelatoare) {
+    if (obj instanceof Congelator) { // verificare tipul obiectului
+        Congelator c = (Congelator) obj; // cast la Congelator
+        if (c.getPret() > 1500 && c.isFunctieDecongelareAutomata()) { // conditia 1
+            System.out.println(c); // afisare Congelatorul daca respecta conditia
+        }
+    }
+}
+
         // afisare date ladafrigorifica
         System.out.println("\nInstante Lada Frigorifica:");
         System.out.println(lada1);
         System.out.println(lada2);
         System.out.println(lada3);
+
+        // verificare si afisare lazi frigorifice care indeplinesc conditiile
+System.out.println("\nLazi frigorifice care indeplinesc conditiile:");
+for (Object obj : laziFrigorifice) {
+    if (obj instanceof LadaFrigorifica) { // verificare tipul obiectului
+        LadaFrigorifica l = (LadaFrigorifica) obj; //  cast la LadaFrigorifica
+        if (l.getCapacitateLitri() > 300 && l.isPortabil()) { // conditia 2
+            System.out.println(l); // afisare Lada Frigorifica daca respecta conditia
+        }
+    }
+}
         
         //  vector pentru Congelator
         Object[] congelatoare = new Object[10];
