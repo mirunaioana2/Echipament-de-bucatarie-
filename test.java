@@ -79,6 +79,25 @@ public class Test {
         for (CuptorIncorporat cuptor : cuptoareIncorporate) {
             System.out.println(cuptor);
         }
+
+        
+        // aplicarea conditiilor și afișarea pentru CuptorcuMicrounde
+        System.out.println("Cuptoare cu microunde care respecta conditiile (putere > 850 si grill == true):");
+        for (CuptorcuMicrounde cuptor : cuptoareMicrounde) {
+            if (cuptor.getPutere() > 850 && cuptor.isGrill()) {
+                System.out.println(cuptor);
+            }
+        }
+        System.out.println();
+
+        // aplicarea conditiilor si afisarea pentru CuptorIncorporat
+        System.out.println("Cuptoare incorporate care respecta conditiile (volum > 60 si iluminare == true):");
+        for (CuptorIncorporat cuptor : cuptoareIncorporate) {
+            if (cuptor.getVolum() > 55 && cuptor.isIluminare()) {
+                System.out.println(cuptor);
+            }
+        }
+        
         
     }
 }
