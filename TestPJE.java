@@ -59,19 +59,26 @@ public class Test {
         System.out.println("\nCafetiere:");
         cafetiere.forEach(System.out::println);
 
-        // Afisare obiecte conform unor conditii
-        System.out.println("\nExpressors cu putere > 1500 si capacitate rezervor > 1.5:");
-        expressors.stream()
-                .filter(obj -> obj instanceof Expressor)
-                .map(obj -> (Expressor) obj)
-                .filter(ex -> ex.getPutere() > 1500 && ex.getCapacitateRezervor() > 1.5)
-                .forEach(System.out::println);
+// Afisarea instantelor si filtrarea pentru Expressor
+System.out.println("Expressor care respecta conditiile (putere > 1500 si capacitate rezervor > 1.5):");
+for (Object obj : expressors) {
+    if (obj instanceof Expressor expressor && expressor.getPutere() > 1500 && expressor.getCapacitateRezervor() > 1.5) {
+        System.out.println(expressor);
+    }
+}
 
-        System.out.println("\nCafetiere care au functia de a pastra cald si capacitate ceainic > 1.2:");
-        cafetiere.stream()
-                .filter(obj -> obj instanceof Cafetiera)
-                .map(obj -> (Cafetiera) obj)
-                .filter(ca -> ca.isFunctiePastreazaCald() && ca.getCapacitateCeainic() > 1.2)
-                .forEach(System.out::println);
+// Afisarea instantelor si filtrarea pentru Cafetiera
+System.out.println("\nCafetiera care respecta conditiile (functie pastreaza cald == true si capacitate ceainic > 1.2):");
+for (Object obj : cafetiere) {
+    if (obj instanceof Cafetiera cafetiera && cafetiera.isFunctiePastreazaCald() && cafetiera.getCapacitateCeainic() > 1.2) {
+        System.out.println(cafetiera);
+    }
+}
+
+// Afisarea instantelor si filtrarea pentru Blender
+System.out.println("\nBlendere care respecta conditiile (putere > 900 si iluminare == true):");
+for (Object obj : blendere) {
+    if (obj instanceof Blender blender && blender.getPutere() > 900 && blender.isIluminare()) {
+        System.out.println(blender);
     }
 }
