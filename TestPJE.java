@@ -75,10 +75,4 @@ for (Object obj : cafetiere) {
     }
 }
 
-// Afisarea instantelor si filtrarea pentru Blender
-System.out.println("\nBlendere care respecta conditiile (putere > 900 si iluminare == true):");
-for (Object obj : blendere) {
-    if (obj instanceof Blender blender && blender.getPutere() > 900 && blender.isIluminare()) {
-        System.out.println(blender);
-    }
-}
+    
