@@ -94,7 +94,7 @@ public class Test {
         // aplicarea conditiilor si afisarea pentru CuptorIncorporat
         System.out.println("Cuptoare incorporate care respecta conditiile (volum > 60 si iluminare == true):");
         for (CuptorIncorporat cuptor : cuptoareIncorporate) {
-            if (cuptor.getVolum() > 55 && cuptor.isIluminare()) {
+            if (cuptor.getVolum() > 55 || !cuptor.isIluminare()) {
                 System.out.println(cuptor);
             }
         }
