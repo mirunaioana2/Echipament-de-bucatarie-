@@ -88,7 +88,8 @@ public class Test {
                 System.out.println(cuptor);
             }
         }
-        
+
+        System.out.println();
 
         // aplicarea conditiilor si afisarea pentru CuptorIncorporat
         System.out.println("Cuptoare incorporate care respecta conditiile (volum > 60 si iluminare == true):");
