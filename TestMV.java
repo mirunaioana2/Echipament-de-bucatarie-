@@ -306,7 +306,7 @@ public class Test {
         for (CombinaFrigorifica combina : combineFrigorifice) {
             // Condiția 1: Numarul de usi == 2
             // Condiția 2: Nivelul de zgomot < 40 dB
-            if (combina.getNumarUsi() == 2 && combina.getNivelZgomot() < 40.0) {
+            if (combina.getNumarUsi() != 2 || combina.getNivelZgomot() < 40.0) {
                 System.out.println(combina);
             }
         }
