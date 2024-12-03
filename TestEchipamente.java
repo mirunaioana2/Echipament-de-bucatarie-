@@ -32,7 +32,7 @@ System.out.println("\nCongelatoare care indeplinesc conditiile:");
 for (Object obj : congelatoare) {
     if (obj instanceof Congelator) { // verificare tipul obiectului
         Congelator c = (Congelator) obj; // cast la Congelator
-        if (c.getPret() > 1500 && c.isFunctieDecongelareAutomata()) { // conditia 1
+        if (c.getPret() > 1500 || !c.isFunctieDecongelareAutomata()==false) { // conditia 1
             System.out.println(c); // afisare Congelatorul daca respecta conditia
         }
     }
