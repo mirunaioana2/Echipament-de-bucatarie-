@@ -62,7 +62,7 @@ public class Test {
 // Afisarea instantelor si filtrarea pentru Expressor
 System.out.println("Expressor care respecta conditiile (putere > 1500 si capacitate rezervor > 1.5):");
 for (Object obj : expressors) {
-    if (obj instanceof Expressor expressor && expressor.getPutere() > 1500 && expressor.getCapacitateRezervor() > 1.5) {
+    if (obj instanceof Expressor expressor && expressor.getPutere() > 1500 && expressor.getCapacitateRezervor() == 1.5) {
         System.out.println(expressor);
     }
 }
